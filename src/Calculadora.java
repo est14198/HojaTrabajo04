@@ -22,9 +22,9 @@ public class Calculadora implements iCalculadora {
 	/**
 	 * Constructor
 	 */
-	public Calculadora() {
+	public Calculadora(int tipoPila, int tipoLista) {
 		FactoryPilas<Double> factoryPilas = new FactoryPilas<Double>();
-		miStack = factoryPilas.getPila(1, 0);
+		miStack = factoryPilas.getPila(tipoPila, tipoLista);
 	}
 
 	@Override

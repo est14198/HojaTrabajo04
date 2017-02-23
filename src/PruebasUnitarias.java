@@ -19,31 +19,31 @@ public class PruebasUnitarias {
 
 	@Test
 	public void division() {
-		iCalculadora calculadora = new Calculadora();
+		iCalculadora calculadora = new Calculadora(0,0);
 		assertEquals("Division de 10/2",calculadora.division(10, 2),5,0.001);
 	}
 	
 	@Test
 	public void multiplicacion() {
-		iCalculadora calculadora = new Calculadora();
+		iCalculadora calculadora = new Calculadora(0,0);
 		assertEquals("Multiplicacion de 10*2",calculadora.multiplicacion(10, 2),20,0.001);
 	}
 	
 	@Test
 	public void suma() {
-		iCalculadora calculadora = new Calculadora();
+		iCalculadora calculadora = new Calculadora(0,0);
 		assertEquals("Suma de 10+2",calculadora.suma(10, 2),12,0.001);
 	}
 	
 	@Test
 	public void resta() {
-		iCalculadora calculadora = new Calculadora();
+		iCalculadora calculadora = new Calculadora(0,0);
 		assertEquals("Resta de 10-2",calculadora.resta(10, 2),8,0.001);
 	}
 	
 	@Test
 	public void operacionBasica() {
-		iCalculadora calculadora = new Calculadora();
+		iCalculadora calculadora = new Calculadora(0,0);
 		assertEquals("Operacion: 1 1 +",calculadora.operar(" 1 1 +"),2,0.001);
 	}
 	

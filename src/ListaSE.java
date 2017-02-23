@@ -51,13 +51,20 @@ public class ListaSE<E> extends ALista<E> {
 	@Override
 	public E removeLast() {
 		Node<E> temp = head;
-		for(int i=1; i<count; i++){
+		for(int i=1; i<count-1; i++){
 			temp = temp.next();
 		}
-		Node<E> temp2 = temp.next();
-		temp.setNext(null);
-		count--;
-		return temp2.value();
+		if(count != 1){
+			Node<E> temp2 = temp.next();
+			temp.setNext(null);
+			count--;
+			return temp2.value();
+		}else{
+			head = null;
+			count--;
+			return temp.value();
+		}
+		
 	}
 
 }

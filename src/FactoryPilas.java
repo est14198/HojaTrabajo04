@@ -14,6 +14,5 @@ public class FactoryPilas<E> {
 		default:
 			return null;
 		}
-		
 	}
 }
