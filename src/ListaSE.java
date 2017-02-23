@@ -28,16 +28,6 @@ public class ListaSE<E> extends ALista<E> {
 		return count;
 	}
 
-	public E removeFirst()
-	// pre: list is not empty
-	// post: removes and returns value from beginning of list
-	{
-		Node<E> temp = head;
-		head = head.next(); // move head down list
-		count--;
-		return temp.value();
-	}
-
 	public void addLast(E value)
 	// post: adds value to end of list
 	{
@@ -60,8 +50,14 @@ public class ListaSE<E> extends ALista<E> {
 
 	@Override
 	public E removeLast() {
-		// TODO Auto-generated method stub
-		return null;
+		Node<E> temp = head;
+		for(int i=1; i<count; i++){
+			temp = temp.next();
+		}
+		Node<E> temp2 = temp.next();
+		temp.setNext(null);
+		count--;
+		return temp2.value();
 	}
 
 }
