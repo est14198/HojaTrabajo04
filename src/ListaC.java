@@ -76,29 +76,4 @@ public class ListaC<E> extends ALista<E> {
 	   count--;
 	   return temp.value();
 	}
-
-	@Override
-	public E getFirst() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public E getLast() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public E removeFirst() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int indexOf(E value) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

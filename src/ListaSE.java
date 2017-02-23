@@ -28,15 +28,6 @@ public class ListaSE<E> extends ALista<E> {
 		return count;
 	}
 
-	public void addFirst(E value)
-	// post: value is added to beginning of list
-	{
-		// note order that things happen:
-		// head is parameter, then assigned
-		head = new Node<E>(value, head);
-		count++;
-	}
-
 	public E removeFirst()
 	// pre: list is not empty
 	// post: removes and returns value from beginning of list
@@ -45,13 +36,6 @@ public class ListaSE<E> extends ALista<E> {
 		head = head.next(); // move head down list
 		count--;
 		return temp.value();
-	}
-
-	public E getFirst()
-	// pre: list is not empty
-	// post: returns first value in list
-	{
-		return head.value();
 	}
 
 	public void addLast(E value)
@@ -74,34 +58,10 @@ public class ListaSE<E> extends ALista<E> {
 
 	}
 
-	public boolean contains(E value)
-	// pre: value is not null
-	// post: returns true iff value is found in list
-	{
-		Node<E> finger = head;
-
-		while (finger != null && !finger.value().equals(value)) {
-			finger = finger.next();
-		}
-		return finger != null;
-	}
-
-	@Override
-	public E getLast() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	@Override
 	public E removeLast() {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public int indexOf(E value) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 
 }
