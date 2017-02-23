@@ -92,7 +92,7 @@ public class Main {
 			miCalcu = new Calculadora(0, 0);
 			break;
 		}
-    	
+		
     	// Imprimir resultado
     	System.out.println("\nResultado: " + miCalcu.operar(datos));
     	scanner.close();

@@ -18,14 +18,29 @@ public class Calculadora implements iCalculadora {
 	private double operacionResta;
 	private double operacionMultiplicacion;
 	private iPila<Double> miStack;
-
+	
+    private static Calculadora INSTANCE = null;
+    
+    public static Calculadora getInstance() {
+        return INSTANCE;
+    }
+    
 	/**
 	 * Constructor
 	 */
 	public Calculadora(int tipoPila, int tipoLista) {
+		if (INSTANCE != null) {
+            throw new IllegalStateException("Ya esta instanciada la clase Calculadora");
+        }
 		FactoryPilas<Double> factoryPilas = new FactoryPilas<Double>();
 		miStack = factoryPilas.getPila(tipoPila, tipoLista);
+		
+		INSTANCE = this;
 	}
+
+    public Object clone() throws CloneNotSupportedException{
+        throw new CloneNotSupportedException("No se puede clonar esta clase, solo una instancia es permitida");
+    }
 
 	@Override
 	// post: recive un string, lo agrega a una pila y traduce la operacion postfix para dar el resultado
