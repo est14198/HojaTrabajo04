@@ -1,16 +1,16 @@
 
-public class FactoryPilas {
+public class FactoryPilas<E> {
 	public FactoryPilas(){
 	}
 	
-	public iPila<Double> getPila(int tipoPila){
+	public iPila<E> getPila(int tipoPila, int tipoLista){
 		switch(tipoPila){
 		case 0:
-			return new PilaArrayList<Double>();
+			return new PilaArrayList<E>();
 		case 1:
-			return new PilaVector<Double>(2);
+			return new PilaVector<E>(2);
 		case 2:
-			return new PilaLista<Double>();
+			return new PilaLista<E>(tipoLista);
 		default:
 			return null;
 		}

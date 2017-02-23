@@ -25,7 +25,6 @@ public class Leer {
 		public String textoLeer(String textoArchivo){
     	    
             String texto = "";
-            
             try {
                 bf = new BufferedReader(new FileReader(textoArchivo));
                 String varTemporal = "";

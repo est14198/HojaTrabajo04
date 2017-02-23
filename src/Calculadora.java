@@ -23,7 +23,8 @@ public class Calculadora implements iCalculadora {
 	 * Constructor
 	 */
 	public Calculadora() {
-		miStack = new PilaVector<Double>(2);
+		FactoryPilas<Double> factoryPilas = new FactoryPilas<Double>();
+		miStack = factoryPilas.getPila(1, 0);
 	}
 
 	@Override

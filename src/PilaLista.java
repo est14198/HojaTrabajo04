@@ -1,24 +1,26 @@
 
 public class PilaLista<E> implements iPila<E> {
 
+	protected iLista<E> data;
 	
+	public PilaLista(int tipoLista){
+		FactoryListas<E> factoryListas = new FactoryListas<E>();
+		data = factoryListas.getLista(tipoLista);
+	}
 
 	@Override
 	public E pop() {
-		// TODO Auto-generated method stub
-		return null;
+		return data.removeLast();
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return data.isEmpty();
 	}
 
 	@Override
 	public void push(E algo) {
-		// TODO Auto-generated method stub
-		
+		data.addLast(algo);
 	}
 
 }
