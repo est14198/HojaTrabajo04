@@ -18,6 +18,10 @@ public class FactoryListas<E> {
 		
 	}
 	
+	/**
+	 * @param tipoLista
+	 * @return lista
+	 */
 	public iLista<E> getLista (int tipoLista) {
 		switch (tipoLista) {
 		case 0:

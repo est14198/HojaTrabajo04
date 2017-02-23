@@ -41,6 +41,15 @@ public class Calculadora implements iCalculadora {
     public Object clone() throws CloneNotSupportedException{
         throw new CloneNotSupportedException("No se puede clonar esta clase, solo una instancia es permitida");
     }
+    
+    /**
+     * @param tipoPila
+     * @param tipoLista
+     */
+    public void cambiarPila(int tipoPila, int tipoLista){
+    	FactoryPilas<Double> factoryPilas = new FactoryPilas<Double>();
+		miStack = factoryPilas.getPila(tipoPila, tipoLista);
+    }
 
 	@Override
 	// post: recive un string, lo agrega a una pila y traduce la operacion postfix para dar el resultado
