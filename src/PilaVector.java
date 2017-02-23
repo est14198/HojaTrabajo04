@@ -14,7 +14,7 @@
 import java.util.Vector;
 
 
-public class PilaVector<E> implements iPila<E> {
+public class PilaVector<E> extends APila<E> {
 
 	protected Vector<E> data;
 	
@@ -35,11 +35,4 @@ public class PilaVector<E> implements iPila<E> {
 	public E pop() {
 		return data.remove(data.size()-1);
 	}
-
-	@Override
-	// post: regresa true si la pila se encuentra vacia
-	public boolean isEmpty() {
-		return data.size() == 0;
-	}
-
 }

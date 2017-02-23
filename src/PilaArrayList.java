@@ -14,7 +14,7 @@
 import java.util.ArrayList;
 
 
-public class PilaArrayList<E> implements iPila<E> {
+public class PilaArrayList<E> extends APila<E> {
 	
 	protected ArrayList<E> data;
 	
@@ -34,12 +34,6 @@ public class PilaArrayList<E> implements iPila<E> {
 	// post: se elimina el ultimo elemento de la pila y se regresa su valor
 	public E pop() {
 		return data.remove(data.size()-1);
-	}
-
-	@Override
-	// post: regresa true si la pila se encuentra vacia
-	public boolean isEmpty() {
-		return data.size() == 0;
 	}
 	
 }
