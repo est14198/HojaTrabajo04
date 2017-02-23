@@ -70,7 +70,7 @@ public class ListaSE<E> extends ALista<E> {
 		} else
 			head = temp;
 
-		count++;
+		count++; 
 
 	}
 
@@ -84,6 +84,24 @@ public class ListaSE<E> extends ALista<E> {
 			finger = finger.next();
 		}
 		return finger != null;
+	}
+
+	@Override
+	public E getLast() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public E removeLast() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int indexOf(E value) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
